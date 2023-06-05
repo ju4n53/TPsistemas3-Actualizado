@@ -1,0 +1,9 @@
+.conteinerMain {
+    margin: .4rem;
+    padding: 1rem;
+    background-color: #e92323;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center
+}
