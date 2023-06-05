@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Sistemas 3 - Delivery</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
+<link rel="stylesheet" href="../../index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../IndexTP_Sistemas3.html">
+                <img width="70" height="70" src="https://img.icons8.com/ios-filled/50/hamburger.png" alt="hamburger"/>
+            </a>
+         
+        </div>
+        <div class="logo-title">
+
+            <h1>Wonder Hamburgueserias</h1>
+        </div>
+        <div class="profile">
+            <a href="">
+
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-female-circle.png" alt="user-female-circle"/>
+            </a>
+        </div>
+    </header>
+    <div class="container-content">
+
+   
+    <div class="sidebar">
+
+        <ul>
+            <li>
+                <a href="../Ventas/indexTPs3_ventas.html">Ventas</a>
+            </li>
+            <hr>
+            <li>
+                <a href="./indexTPs3_delivery.html">Delivery</a>
+            </li>
+            <hr>
+            <li>
+                <a href="../RegProducto/indexTPs3_RegProdu.html">
+                    Registro de Productos</a>
+            </li>
+            <hr>
+            <li >
+                <a href="../Stock/indexTPs3_stock.html">
+                    Stock</a>
+            </li>
+            <hr>
+            <li >
+                <a href="../RegEmpleados/indexTPs3_RegEmple.html">
+                    Registro de Empleados
+                </a>
+            </li>
+            <div class="btn-sidebar">
+                <input
+                    type="button"
+                    value="⬅ Salir"
+                    style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); "
+                    onclick="salida()"></div>
+        </ul>
+    </div>
+    <main>
+
+      
+
+        <div class="container">
+            <h1>Información del Cliente</h1>
+            <div class="cliente-info">
+              <p><strong>Rut:</strong> <span id="rut"></span></p>
+              <p><strong>Calle:</strong> <span id="calle"></span></p>
+              <p><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+              <p><strong>Comuna:</strong> <span id="comuna"></span></p>
+              <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+              <p><strong>Número:</strong> <span id="numero"></span></p>
+              <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+              <p><strong>Teléfono 1:</strong> <span id="telefono1"></span></p>
+              <p><strong>Teléfono 2:</strong> <span id="telefono2"></span></p>
+            </div>
+          </div>
+    </main>
+</div>
+
+    <footer>
+        <h5> Sistemas 3 </h5>
+    </footer>
+    <script>
+        function salida() {
+            window.location.href = "testing_tpS3Validador.html";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="../../js/api.js"></script>
+    <!--  <script src="TP_Sistemas3.js"></script> -->
+</body>
+
+</html>

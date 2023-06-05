@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+*{
+
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #343434;
+}
+header {
+    background-color: rgb(255, 217, 4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Bebas Neue';
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.container-content{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+}
+main{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:84vh;
+}
+.sidebar {
+    background-color: rgb(49, 49, 49);
+    color: aliceblue;
+    display: flex;
+    padding: 4rem;
+
+}
+.sidebar hr{
+    height: 1px;
+}
+.hero{
+    display: flex;
+    text-align:center ;
+color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+.hero-title{
+    margin: 1rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.hero-description{
+margin: 1rem;
+font-family: 'Roboto';
+font-weight:normal;
+}
+
+.sidebar li {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    list-style: none;
+
+}
+
+.sidebar li a {
+    color: rgb(206, 149, 26);
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-weight: bold;
+ text-decoration: none
+}
+
+.sidebar hr {
+    background-color: rgb(197, 165, 20);
+
+    border: none;
+} 
+.sidebar input{
+    align-content: center;
+}
+.btn-sidebar{
+    text-align: center;
+    margin-top: 2rem;
+}
+th,
+td {
+    text-align: left;
+    padding: 3px;
+    border: 1px solid rgb(10, 10, 10);
+}
+/* 
+.conteinerMain {
+
+ 
+} */
+
+/*   .empleado {
+    position: absolute;
+    top: o;
+    right: 0;
+} */
+
+footer {
+    font-family: 'Roboto';
+    background-color: rgb(255, 217, 4);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: .49rem;
+}
+
+footer h5 {
+    font-size: 1rem;
+} 
