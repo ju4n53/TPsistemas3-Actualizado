@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="./index.css">
 
+    <style>
+        label{
+            margin-right: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,13 +69,10 @@
                 </li>
                 <div class="btn-sidebar">
                     <a href="../../pages/login/login.html">
-                        <input
-                        type="button"
-                        value="⬅ Salir"
-                        style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); "
-                       > 
+                        <input type="button" value="⬅ Salir"
+                            style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); ">
                     </a>
-                  </div>
+                </div>
             </ul>
         </div>
 
@@ -108,18 +110,24 @@
                         <hr>
 
                         <!-- *CARGA DE BEBIDAS -->
-                        <div class="form-title">
-                            <h4>Bebidas</h4>
-                        </div>
+                        <form id="formBebida">
+                            <div class="form-title">
+                                <h4>Bebidas</h4>
+                            </div>
 
-                        <!-- <input type="text" class="ingDatos" name="" id="txtCodigo2" placeholder="Código"> -->
-                        <input type="text" class="ingDatos" name="" id="txtBebida" placeholder="Bebida">
-                        <input type="text" class="ingDatos" name="" id="txtPrecio2" placeholder="Precio">
-                        <div class="form-btn">
-                            <input id="botonDatos" type="button" name="" value="Agregar" onclick="carga2()"
-                                style="text-align: center;">
+                            <!-- <input type="text" class="ingDatos" name="" id="txtCodigo2" placeholder="Código"> -->
+                            <input type="text" class="ingDatos" name="" id="txtBebida" placeholder="Bebida">
+                            <div class="div-radio" style="display: flex; color: darkslategray;">
+                                <label for=""><input type="radio" name="option" value="1500lts">1500ml</label>
+                               <label for=""><input type="radio" name="option" value="1000ml">1000ml</label>
+                               <label for=""> <input type="radio" name="option" value="500ml">500ml</label>
+                            </div>
+                            <input type="text" class="ingDatos" name="" id="txtPrecio2" placeholder="Precio">
+                            <div class="form-btn">
+                                <input id="botonDatos" type="button" name="" value="Agregar" onclick="carga2()"
+                                    style="text-align: center;">
 
-                        </div>
+                            </div>
 
                         </form>
 
