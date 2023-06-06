@@ -13,37 +13,50 @@
 
 <body>
 
-<div class="register">
+    <div class="register">
 
 
 
-<main>
-    <div class="login-container">
-        <h1>Inicio de Sesión</h1>
-        <div class="form-group">
-            <label for="Nombr">Usuario</label>
-            <input type="text" id="Nombr" placeholder="Usuario" maxlength="15">
-        </div>
-        <div class="form-group">
-            <label for="Passw">Contraseña</label>
-            <input type="password" id="Passw" placeholder="Contraseña" maxlength="12">
-        </div>
-        <div class="form-group">
-            <input type="button" value="Ingresar" onclick="ingreso()">
+        <main>
+            <div class="login-container">
+                <h1>Inicio de Sesión</h1>
+                <div class="form-group">
+                    <label for="Nombr">Usuario</label>
+                    <input type="text" id="Nombr" placeholder="Usuario" maxlength="15">
+                </div>
+                <div class="form-group">
+                    <label for="Passw">Contraseña</label>
+                    <input type="password" id="Passw" placeholder="Contraseña" maxlength="12">
+                    
+                    <br><br>
+                    <label for="" style="font-size: 0.6rem;">Mostrar contraseña</label>
+                    <input type="checkbox" onclick="mostrarPassw()" value="Mostrar">
+                </div>
+                <div class="form-group">
+                    <input type="button" value="Ingresar" onclick="ingreso()">
+                </div>
+            </div>
+
+        </main>
+        <div class="img-container">
+
         </div>
     </div>
-
-</main>
-<div class="img-container">
-
-</div>
-</div>
     <script>
 
         let usuarios = [
             { user: "juan", key: "juan1" },
             { user: "mariel", key: "mariel1" }
         ]
+
+        function mostrarPassw() {
+            var passwordField = document.getElementById("Passw");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
 
         function ingreso() {
 
@@ -56,8 +69,9 @@
             idNombr = _nombr.value;
             idPassw = _passw.value;
 
+            mostrarPassw();
 
-            _nombr.value="";
+            _nombr.value = "";
             _passw.value = "";
             _nombr.focus();
 
@@ -71,11 +85,11 @@
 
 
             if (userValido) {
-                
+
                 alert("Inicio de sesión exitoso")
-                
-                window.location.href = "IndexTP_Sistemas3.html";
-            } 
+
+                window.location.href = "../../IndexTP_Sistemas3.html";
+            }
             else {
                 alert("Usuario o contraseña incorrectos");
             }
