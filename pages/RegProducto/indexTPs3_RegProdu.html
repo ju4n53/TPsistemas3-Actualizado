@@ -9,16 +9,16 @@
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="./index.css">
-    
+
 </head>
 
 <body>
     <header>
         <div class="logo">
             <a href="../../IndexTP_Sistemas3.html">
-                <img width="70" height="70" src="https://img.icons8.com/ios-filled/50/hamburger.png" alt="hamburger"/>
+                <img width="70" height="70" src="https://img.icons8.com/ios-filled/50/hamburger.png" alt="hamburger" />
             </a>
-         
+
         </div>
         <div class="logo-title">
 
@@ -27,17 +27,18 @@
         <div class="profile">
             <a href="../../IndexTP_Sistemas3.html">
 
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-female-circle.png" alt="user-female-circle"/>
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-female-circle.png"
+                    alt="user-female-circle" />
             </a>
         </div>
     </header>
 
     <div class="container-content">
-        
+
         <div class="sidebar">
 
             <ul>
-                
+
                 <li>
                     <a href="../Ventas/indexTPs3_ventas.html">Ventas</a>
                 </li>
@@ -51,107 +52,110 @@
                         Registro de Productos</a>
                 </li>
                 <hr>
-                <li >
+                <li>
                     <a href="../Stock/indexTPs3_stock.html">
                         Stock</a>
                 </li>
                 <hr>
-                <li >
+                <li>
                     <a href="./RegEmpleados/indexTPs3_RegEmple.html">
                         Registro de Empleados
                     </a>
                 </li>
                 <div class="btn-sidebar">
-                    <input
+                    <a href="../../pages/login/login.html">
+                        <input
                         type="button"
                         value="⬅ Salir"
                         style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); "
-                        onclick="salida()"></div>
+                       > 
+                    </a>
+                  </div>
             </ul>
         </div>
 
 
-    <main>
-  
+        <main>
 
-        <div class="hero">
 
-            <div class="conteinerMain">
-                <section>
-                    <div class="product-title">
+            <div class="hero">
 
-                        <h3 style="text-align: center;">Carga productos </h3>
-                    </div>
-                    <form>
+                <div class="conteinerMain">
+                    <section>
+                        <div class="product-title">
+
+                            <h3 style="text-align: center;">Carga productos </h3>
+                        </div>
+                        <form>
+                            <div class="form-title">
+                                <h4>Hamburguesas y combos</h4>
+                            </div>
+                            <!-- *CARGA DE HAMBURGUESAS -->
+
+                            <!-- <input type="text" class="ingDatos" name="" id="txtCodigo" placeholder="Código"> -->
+                            <input type="text" class="ingDatos" name="" id="txtProducto" placeholder="Producto/ Combo">
+                            <input type="text" class="ingDatos" name="" id="txtPrecio" placeholder="Precio">
+                            <div class="form-btn">
+
+                                <input id="botonDatos" type="button" style="text-align: center;" name="" value="Agregar"
+                                    onclick="carga1()" style="display: flex;margin-left: auto;">
+                            </div>
+
+                        </form>
+
+
+
+                        <hr>
+
+                        <!-- *CARGA DE BEBIDAS -->
                         <div class="form-title">
-                            <h4>Hamburguesas y combos</h4>
+                            <h4>Bebidas</h4>
                         </div>
-                        <!-- *CARGA DE HAMBURGUESAS -->
-                     
-                        <!-- <input type="text" class="ingDatos" name="" id="txtCodigo" placeholder="Código"> -->
-                        <input type="text" class="ingDatos" name="" id="txtProducto" placeholder="Producto/ Combo">
-                        <input type="text" class="ingDatos" name="" id="txtPrecio" placeholder="Precio">
+
+                        <!-- <input type="text" class="ingDatos" name="" id="txtCodigo2" placeholder="Código"> -->
+                        <input type="text" class="ingDatos" name="" id="txtBebida" placeholder="Bebida">
+                        <input type="text" class="ingDatos" name="" id="txtPrecio2" placeholder="Precio">
                         <div class="form-btn">
+                            <input id="botonDatos" type="button" name="" value="Agregar" onclick="carga2()"
+                                style="text-align: center;">
 
-                            <input id="botonDatos" type="button" style="text-align: center;" name="" value="Agregar" onclick="carga1()"
-                                style="display: flex;margin-left: auto;">
                         </div>
 
-                    </form>
-                    
+                        </form>
 
-                  
-                    <hr>
 
-                    <!-- *CARGA DE BEBIDAS -->
-                    <div class="form-title">
-                        <h4>Bebidas</h4>
-                    </div>
-            
-                    <!-- <input type="text" class="ingDatos" name="" id="txtCodigo2" placeholder="Código"> -->
-                    <input type="text" class="ingDatos" name="" id="txtBebida" placeholder="Bebida">
-                    <input type="text" class="ingDatos" name="" id="txtPrecio2" placeholder="Precio">
-                    <div class="form-btn">
-                        <input id="botonDatos" type="button" name="" value="Agregar" onclick="carga2()"
-                       style="text-align: center;">
+                        <section id="java">
 
-                    </div>
-                   
-                    </form>
-    
+                            <p id="pEst"></p>
+                        </section>
 
-                    <section id="java">
-  
-                        <p id="pEst"></p>
-                    </section>
-               
-                    <div class="reinicio" style="display: flex; justify-content: end;">
-                        <center>
-                            <input id="botonReinicio" class="delete-button "  style="text-align: center;"type="button" name="" value="Reiniciar"
-                                onclick="document.location.reload();">
-                        </center>
-                    </div>
+                        <div class="reinicio" style="display: flex; justify-content: end;">
+                            <center>
+                                <input id="botonReinicio" class="delete-button " style="text-align: center;"
+                                    type="button" name="" value="Reiniciar" onclick="document.location.reload();">
+                            </center>
+                        </div>
 
-            </div>
-        </div>
-        <section id="tablas">
-
-            <table>
-                <div class="form-title">
-                    <h4 style="color: antiquewhite;">Hamburguesas y combos</h4>
                 </div>
-                <thead>
-                    <tr id="lista">
-                        <th>Código</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
+            </div>
+            <section id="tablas">
 
-                    </tr>
-                </thead>
-                <tbody>
+                <table>
+                    <div class="form-title">
+                        <h4 style="color: antiquewhite;">Hamburguesas y combos</h4>
+                    </div>
+                    <thead>
+                        <tr id="lista">
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
 
-                </tbody>              
-             
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
 
                     <table>
                         <div class="form-title">
@@ -170,25 +174,27 @@
                         </tbody>
 
                     </table>
-             
 
-            </table>
-           
-        </section>
-    </main>
-</div>
+
+                </table>
+
+            </section>
+        </main>
+    </div>
     <footer>
         <h5> Sistemas 3 </h5>
     </footer>
 
-    <script>
-        function salida(){
-            window.location.href = "../../login.html";
-        }
-    </script>
+
     <!--  <script src="TP_Sistemas3.js"></script> -->
     <script src="../../js/RegProdu.js"></script>
     <script src="../../js/RegProdu2.js"></script>
+
+    <script>
+        function salida() {
+            window.location.href = "../../login.html";
+        }
+    </script>
 </body>
 
 </html>
