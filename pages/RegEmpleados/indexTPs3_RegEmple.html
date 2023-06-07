@@ -9,16 +9,16 @@
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="./index.css">
-    
+
 </head>
 
 <body>
     <header>
         <div class="logo">
             <a href="../../IndexTP_Sistemas3.html">
-                <img width="70" height="70" src="https://img.icons8.com/ios-filled/50/hamburger.png" alt="hamburger"/>
+                <img width="70" height="70" src="https://img.icons8.com/ios-filled/50/hamburger.png" alt="hamburger" />
             </a>
-         
+
         </div>
         <div class="logo-title">
 
@@ -27,7 +27,8 @@
         <div class="profile">
             <a href="../../IndexTP_Sistemas3.html">
 
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-female-circle.png" alt="user-female-circle"/>
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/user-female-circle.png"
+                    alt="user-female-circle" />
             </a>
         </div>
     </header>
@@ -49,84 +50,97 @@
                         Registro de Productos</a>
                 </li>
                 <hr>
-                <li >
+                <li>
                     <a href="../Stock/indexTPs3_stock.html">
                         Stock</a>
                 </li>
                 <hr>
-                <li >
+                <li>
                     <a href="./indexTPs3_RegEmple.html">
                         Registro de Empleados
                     </a>
                 </li>
                 <div class="btn-sidebar">
-                    <input
-                        type="button"
-                        value="⬅ Salir"
-                        style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); "
-                        onclick="salida()"></div>
+                    <a href="../../pages/login/login.html">
+                        <input type="button" value="⬅ Salir"
+                            style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); ">
+                    </a>
+                </div>
             </ul>
         </div>
-    <main>
+        <main>
 
-       
-        <section>
 
-       
-        <div class="hero-title-empl">
-            <h2>Registro de empleados</h2>
-        </div>
-    
-        <div class="hero-empl ">
-        
-          
-            <div class="regEmpleado" >
+            <section>
 
-                <!-- <h3 style="text-align: center; margin-top: 1px;">Nuevo ingreso</h3> -->
-                <input type="text" id="nombr" placeholder="Nombre" >
-                <input type="text" id="apellid" placeholder="Apellido" >
-                <input type="text" id="dni" placeholder="DNI" >
-                <input type="text" id="Direcci" placeholder="Direccion" >
-                <label for="" class="fecha" >Fecha de nacimiento</label>
-                <input type="date" id="fechNac" placeholder="Fecha de nacimiento" >
-                <input type="text" id="telefo" placeholder="Telefono" >
 
-                <input type="button" value="Registrar" onclick="guardar()" >
-            </div>
+                <div class="hero-title-empl">
+                    <h2>Registro de empleados</h2>
+                </div>
 
-            <div class="tablaEmplead">
+                <div class="hero-empl ">
 
-                <table >
-<thead>
-    <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>DNI</th>
-        <th>Direccion</th>
-        <th>Fecha de nacimiento</th>
-        <th>Telefono</th>
+                    <form>
+                        <div class="regEmpleado">
 
-    </tr>
-</thead>
-<tbody>
-    
-</tbody>
+                            <!-- <h3 style="text-align: center; margin-top: 1px;">Nuevo ingreso</h3> -->
+                            <input type="text" id="IdEmpleado" placeholder="ID" disabled>
+                            <input type="text" id="dni" placeholder="DNI">
+                            <input type="text" id="Cuil" placeholder="Cuil">
+                            <input type="text" id="apellid" placeholder="Apellido">
+                            <input type="text" id="nombr" placeholder="Nombre">
+                            <input type="text" id="Edad" placeholder="Edad">
+                           
+                            <form class="direccion">
+                                <input type="text" id="Calle" placeholder="Calle">
+                                <input type="text" id="NumCalle" placeholder="N°" style="width: 5rem;">
+                                <input type="text" id="Dpto" placeholder="Dpto" style="width: 5rem;">
+                                <input type="text" id="Piso" placeholder="Piso" style="width: 5rem;">
+                                <input type="text" id="Barrio" placeholder="Barrio" style="width: 9rem;">
+                            </form>
+                              
+                            <input type="text" id="fechIngres" placeholder="Fecha de ingreso" style="width: 9rem;">
+                           <label>N° telefonico</label> <input type="tel" id="telCaract" placeholder="Caract"style="width: 4rem;">
+                            <input type="tel" id="telNum" placeholder="Numero"style="width: 5rem;">
+                            <input type="mail" id="email" placeholder="Email">
 
-                </table>
+                            <input type="button" value="Registrar" onclick="guardar()">
+                        </div>
+                    </form>
 
-            </div>
-        </div>
+                    <div class="tablaEmplead">
 
-    </section>
-    </main>
-</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>DNI</th>
+                                    <th>Direccion</th>
+                                    <th>Fecha de nacimiento</th>
+                                    <th>Telefono</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
     <footer>
         <h5> Sistemas 3 </h5>
     </footer>
 
 
     <script>
-        function salida(){
+        function salida() {
             window.location.href = "testing_tpS3Validador.html";
         }
     </script>
