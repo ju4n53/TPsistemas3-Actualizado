@@ -1,14 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
-*{
+* {
 
     margin: 0px;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #343434;
 }
+
 header {
     background-color: rgb(255, 217, 4);
     display: flex;
@@ -27,22 +28,26 @@ header h1 {
     display: flex;
     align-items: center;
 }
-.container-content{
-    display:flex;
+
+.container-content {
+    display: flex;
     align-items: center;
     flex-direction: row;
 }
+
 .logo img {
     width: 50px;
     height: 50px;
     margin-left: 2rem;
 }
-main{
+
+main {
     display: flex;
-    justify-content:center;
-    align-items:center;
-    height:84vh;
+    justify-content: center;
+    align-items: center;
+    height: 84%;
 }
+
 .sidebar {
     background-color: rgb(49, 49, 49);
     color: aliceblue;
@@ -50,27 +55,31 @@ main{
     padding: 4rem;
 
 }
-.sidebar hr{
+
+.sidebar hr {
     height: 1px;
 }
-.hero{
+
+.hero {
     display: flex;
-    text-align:center ;
-color: white;
+    text-align: center;
+    color: white;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     flex-direction: column;
 }
-.hero-title{
+
+.hero-title {
     margin: 1rem;
     font-family: 'Roboto';
     font-weight: bold;
 }
-.hero-description{
-margin: 1rem;
-font-family: 'Roboto';
-font-weight:normal;
+
+.hero-description {
+    margin: 1rem;
+    font-family: 'Roboto';
+    font-weight: normal;
 }
 
 .sidebar li {
@@ -86,27 +95,31 @@ font-weight:normal;
     font-family: 'Poppins';
     font-weight: bold;
     font-weight: bold;
- text-decoration: none
+    text-decoration: none
 }
 
 .sidebar hr {
     background-color: rgb(197, 165, 20);
 
     border: none;
-} 
-.sidebar input{
+}
+
+.sidebar input {
     align-content: center;
 }
-.btn-sidebar{
+
+.btn-sidebar {
     text-align: center;
     margin-top: 2rem;
 }
+
 th,
 td {
     text-align: left;
     padding: 3px;
     border: 1px solid rgb(10, 10, 10);
 }
+
 /* 
 .conteinerMain {
 
@@ -122,12 +135,12 @@ td {
 footer {
     font-family: 'Roboto';
     background-color: rgb(255, 217, 4);
-display: flex;
-align-items: center;
-justify-content: center;
-padding: .49rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .49rem;
 }
 
 footer h5 {
     font-size: 1rem;
-} 
+}
