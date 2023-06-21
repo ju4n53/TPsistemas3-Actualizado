@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="../../indexDelivery.css"> -->
     <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="indexDelivery.css">
 
 </head>
 
@@ -62,37 +63,97 @@
                 </li>
                 <div class="btn-sidebar">
                     <a href="../../pages/login/login.html">
-                        <input
-                        type="button"
-                        value="⬅ Salir"
-                        style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); "
-                       > 
+                        <input type="button" value="⬅ Salir"
+                            style=" padding: 8px 22px 8px 20px;border-radius: 0px 10px 0px 10px; background-color: rgb(240, 77, 77); ">
                     </a>
-                  </div>
+                </div>
             </ul>
         </div>
         <main>
 
-
             <div class="hero">
-                <div class="hero-title">
-                    <h2>Bienvenido</h2>
-                </div>
 
                 <div class="conteinerMain">
-                    <table>
+                    <section>
+                        <form>
+                            <div class="form-title">
+                                <h4>Repartos</h4>
+                            </div>
+                            <!-- *CARGA DE HAMBURGUESAS -->
+
+                            <!-- ! configurar codigo para BD-->
+
+
+                            <input type="date" class="ingDatos" name="" id="txtFechaRrepa" placeholder="Fecha">
+                            <div class="grid"
+                                style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-content: space-around;">
+                                <div class="form-title">
+                                    <strong>
+                                        <label for="Repartidores">Repartidores</label>
+                                    </strong>
+                                </div>
+                                <select name="Repartidores" id="txtRepartidores" style="margin-left: 2rem;">
+                                    <option value="Repa0">...</option>
+                                    <option value="Repa1">Pablo</option>
+                                    <option value="Repa2">Gaston</option>
+                                    <option value="Repa3">Luis</option>
+                                </select>
+                            </div>
+                            <input type="text" class="ingDatos" name="" id="txtClienteRrepa" placeholder="Cliente">
+                            <input type="text" class="ingDatos" name="" id="txtDireccion" placeholder="Direccion">
+                            <input type="text" class="ingDatos" name="" id="txtIndicaciones" placeholder="Indicaciones">
+
+                            <div class="grid"
+                                style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-content: space-around;">
+                                <div class="form-title">
+                                    <strong>
+                                        <label for="Estado">Estado</label>
+                                    </strong>
+                                </div>
+                                <select name="Estado" id="TxtEstado">
+                                    <option value="estado0">...</option>
+                                    <option value="estado1">En viaje</option>
+                                    <option value="estado2">Entregado</option>
+                                    <option value="estado3">Rechazado</option>
+                                </select>
+                            </div>
+
+                            <br>
+                            <div class="form-btn">
+                                <input id="botonDatos" type="button" style="text-align: center;" name=""
+                                    value="Registrar" onclick="Registrar1(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
+                            </div>
+
+                        </form>
+
+                </div>
+            </div>
+
+            <section id="tablas">
+
+                <section id="tabla1">
+                    <table id="tabla1">
+
+                        <input type="text" id="busqueda1" placeholder="Buscar">
                         <thead>
-                            <tr>
+                            <tr id="lista">
                                 <th>Fecha</th>
                                 <th>Repartidor</th>
-                                <th>ID Cliente</th>
+                                <th>Ciente</th>
+                                <th>Direccion</th>
+                                <th>Indicaciones</th>
+                                <th>Estado</th>
+
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbody1">
 
                         </tbody>
+
                     </table>
-                </div>
+                </section>
 
         </main>
     </div>

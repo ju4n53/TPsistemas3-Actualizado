@@ -1,9 +1,99 @@
 .conteinerMain {
     margin: .4rem;
     padding: 1rem;
-    background-color: #e92323;
+    background-color: #ebe6e6ee;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10rem;
     display: flex;
     align-items: center
+}
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4 {
+    font-size: 18px;
+    
+}
+.product-title h3 {
+    font-family: 'Roboto';
+    color: black;
+   
+}
+.form-title {
+    font-family: 'Roboto';
+    color: black; margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+.ingDatos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin: .5rem;
+    padding: .4rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.form-btn input{
+text-align: center;
+}
+
+#botonDatos {
+    width: 120px;
+    height: 40px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    margin: 1rem;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+#botonDatos input{
+    text-align: center;
+}
+#botonDatos:hover{
+    background-color: #39813c;
+}
+
+#tablas{
+    margin: 1rem;
+
+}
+
+table {
+width: 100%;
+
+border-collapse: collapse;
+margin-bottom: 20rem;
+
+}
+
+th, td {
+padding: .9rem;
+text-align: left;
+background-color:#fffef6;
+font-family: 'Roboto';
+border-bottom: 1px solid #ddd;
+}
+
+th {
+background-color:#ffd904;
+}
+
+#tablas {
+margin-top: 20px;
 }
