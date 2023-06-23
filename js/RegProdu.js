@@ -1,60 +1,72 @@
-/* let contador = 100;
-let codigo = [];
-let producto = [];
-let porcion=[];
-let precio = [];
-let i = 0;
-function carga1() {
-	//const _txtCodigo = document.getElementById("txtCodigo");
-	const _txtProducto = document.getElementById("txtProducto");
-	const _txtPorcion = document.getElementById("txtPorcion");
-	const _txtPrecio = document.getElementById("txtPrecio");
+GetAll3()
 
-	//codigo[i] = _txtCodigo.value;
-	producto[i] = _txtProducto.value;
-	porcion[i] = _txtPorcion.value;
-	precio[i] = parseInt(_txtPrecio.value);
-	i++;
-	contador = contador + 1;
+function GetAll3() {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "http://localhost:53248/api/Insumos",
+        success: function (data) {
+            //alert(data)
 
-	const _td0 = document.createElement("td");
-	_td0.innerHTML = contador;
+            const tbody3 = document.getElementById("tbody3");
 
-	const _td1 = document.createElement("td");
-	_td1.innerHTML = _txtProducto.value;
+            data.forEach(o => {
+                let _tr = `<tr>
+                <td>${o.IdInsumos}</td>
+                <td>${o.Nombre}</td>
+				<td>${o.Descripcion}</td>
+                <td>${o.Cantidad}</td>
+				<td>${o.Precio}</td>
+            
+            </tr>`
 
-	const _td2 = document.createElement("td");
-	_td2.innerHTML = _txtPorcion.value;
+                tbody3.innerHTML += _tr;
+            });
+        },
+        error: function (error) {
 
-	const _td3 = document.createElement("td");
-	_td3.innerHTML = _txtPrecio.value;
+            console.log(error)
+        }
+    })
 
-	const _tr = document.createElement("tr");
-	_tr.appendChild(_td0);
-	_tr.appendChild(_td1);
-	_tr.appendChild(_td2);
-	_tr.appendChild(_td3);
+}
 
-	const _tbody = document.querySelector("tbody");
-	_tbody.appendChild(_tr);
+GetAll2()
 
+function GetAll2() {
+	$.ajax({
+		type: "GET",
+		dataType: "json",
+		url: "http://localhost:53248/api/Bebida",
+		success: function (data2) {
+			//alert(data)
 
-	//_txtCodigo.value = "";
-	_txtProducto.value = "";
-	_txtPorcion.value = "";
-	_txtPrecio.value = "";
-	_txtProducto.focus();
+			const tbody2 = document.getElementById("tbody2");
 
+			data2.forEach(o => {
+				let _tr = `<tr>
+                <td>${o.IdBebida}</td>
+                <td>${o.Nombre}</td>
+				<td>${o.Medida}</td>
+                <td>${o.Descripcion}</td>
+				<td>${o.Precio}</td>
+            
+            </tr>`
 
-} */
-const id = document.getElementById("txtId1");
-const Nombre = document.getElementById("txtNombre1");
-const Descripcion = document.getElementById("txtDescripcion1");
-const Precio = document.getElementById("txtPrecio1");
+				tbody2.innerHTML += _tr;
+			});
+		},
+		error: function (error) {
 
-GetAll()
+			console.log(error)
+		}
+	})
 
-function GetAll() {
+}
+
+GetAll1()
+
+function GetAll1() {
 	$.ajax({
 		type: "GET",
 		dataType: "json",
@@ -85,7 +97,7 @@ function GetAll() {
 }
 
 function Buscar1() {
-	/* const id = document.getElementById("txtId1") */
+	const id = document.getElementById("txtId1")
 	get(parseInt(id.value))
 }
 
@@ -97,9 +109,9 @@ function get(id) {
 		success: function (data) {
 			console.log(data)
 
-			/* const Nombre = document.getElementById("txtNombre1")
+			const Nombre = document.getElementById("txtNombre1")
 			const Descripcion = document.getElementById("txtDescripcion1")
-			const Precio = document.getElementById("txtPrecio1") */
+			const Precio = document.getElementById("txtPrecio1")
 
 			Nombre.value = data.Nombre;
 			Descripcion.value = data.Descripcion;
@@ -110,14 +122,14 @@ function get(id) {
 
 function Registrar1() {
 
-	/* const Nombre = document.getElementById("txtNombre1");
+	const Nombre = document.getElementById("txtNombre1");
 	const Descripcion = document.getElementById("txtDescripcion1");
-	const Precio = document.getElementById("txtPrecio1"); */
+	const Precio = document.getElementById("txtPrecio1");
 
 	obj = {
 		"Nombre": Nombre.value,
 		"Descripcion": Descripcion.value,
-		"Precio": Precio.value
+		"Precio": Precio.value,
 	}
 	//  console.log(obj)
 
@@ -202,7 +214,7 @@ function del(id) {
 }
 
 
-document.getElementById("busqueda1").addEventListener("input", function () {
+/* document.getElementById("busqueda1").addEventListener("input", function () {
 	var input = this.value.toLowerCase();
 	var tabla = document.getElementById("tabla1");
 	var filas = tabla.getElementsByTagName("tr");
@@ -226,5 +238,5 @@ document.getElementById("busqueda1").addEventListener("input", function () {
 			fila.style.display = "none";
 		}
 	}
-});
+}); */
 

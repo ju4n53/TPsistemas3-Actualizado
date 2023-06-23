@@ -9,8 +9,9 @@
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="./index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/js/RegProdu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="/js/RegProdu3.js"></script>
 
     <style>
         label {
@@ -61,7 +62,7 @@
                 </li>
                 <hr>
                 <li>
-                    <a href="./indexTPs3_RegProdu2.html">
+                    <a href="/pages/RegProducto/indexTPs3_RegProdu2.html">
                         Registro Bebidas</a>
                 </li>
                 <hr>
@@ -85,9 +86,7 @@
             </ul>
         </div>
 
-
         <main>
-
 
             <div class="hero">
 
@@ -97,135 +96,64 @@
 
                             <h3 style="text-align: center;">Carga productos </h3>
                         </div>
-                        <form>
-                            <div class="form-title">
-                                <h4>Hamburguesas y combos</h4>
-                            </div>
-                            <!-- *CARGA DE HAMBURGUESAS -->
-
-                            <!-- ! configurar codigo para BD-->
-                            <div class="form-title"
-                                style="display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center;">
-
-                                <label for="busqueda" style="font-size: medium;"><strong>Realizar
-                                        consulta</strong></label>
-                                <input type="text" class="ingDatos" name="" id="txtId1" placeholder="Código"
-                                    style="width: 4rem;">
-
-                                <div class="form-btn">
-                                    <input id="botonDatos" type="button" style="text-align: center; width: 5rem;"
-                                        name="" value="Buscar" onclick="Buscar1()"
-                                        style="display: flex;margin-left: auto;">
-                                </div>
-                            </div>
-
-                            <input type="text" class="ingDatos" name="" id="txtNombre1" placeholder="Producto">
-                            <input type="text" class="ingDatos" name="" id="txtDescripcion1" placeholder="Descripcion">
-                            <input type="text" class="ingDatos" name="" id="txtPrecio1" placeholder="Precio">
-
-                            <div class="form-btn">
-                                <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Registrar" onclick="Registrar1(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-                                <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Modificar" onclick="Modificar1(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-                                <input id="botonDatos" type="button"
-                                    style="text-align: center;background-color: rgb(139, 34, 34);" name=""
-                                    value="Eliminar" onclick="Eliminar1(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-
-                            </div>
-
-                        </form>
-
-
-
-                        <hr>
-
-                        <!-- *CARGA DE BEBIDAS -->
-                        <!--  <form id="formBebida">
-                            <div class="form-title">
-                                <h4>Bebidas</h4>
-                            </div>
-
-                            <div class="form-title"
-                                style="display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center;">
-
-                                <label for="busqueda" style="font-size: medium;"><strong>Realizar
-                                        consulta</strong></label>
-                                <input type="text" class="ingDatos" name="" id="txtId2" placeholder="Código"
-                                    style="width: 4rem;">
-
-                                <div class="form-btn">
-                                    <input id="botonDatos" type="button" style="text-align: center; width: 5rem;"
-                                        name="" value="Buscar" onclick="Buscar2()"
-                                        style="display: flex;margin-left: auto;">
-                                </div>
-                            </div>
-
-
-                            <input type="text" class="ingDatos" name="" disabled id="txtNombre2" placeholder="Nombre">
-                            <input type="text" class="ingDatos" name="" id="txtMedida2" placeholder="Medida">
-                            <input type="text" class="ingDatos" name="" id="txtDescripcion2" placeholder="Descripcion">
-                            <input type="text" class="ingDatos" name="" id="txtPrecio2" placeholder="Precio">
-
-                            <div class="form-btn">
-                                <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Registrar" onclick="Registrar2(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-                                <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Modificar" onclick="Modificar2(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-                                <input id="botonDatos" type="button"
-                                    style="text-align: center;background-color: rgb(139, 34, 34);" name=""
-                                    value="Eliminar" onclick="Eliminar2(), document.location.reload()"
-                                    style="display: flex;margin-left: auto;">
-
-                            </div>
-                        </form>
-                        <hr>
 
                         <form id="formBebida">
                             <div class="form-title">
                                 <h4>Insumos</h4>
                             </div>
 
-                           
-                                  
-                            <input type="text" class="ingDatos" name="" id="txtInsumoNomb" placeholder="Nombre">
-                            <input type="text" class="ingDatos" name="" id="txtInsumoTamañ" placeholder="Descripcion">
-                            <input type="text" class="ingDatos" name="" id="txtInsumoCant" placeholder="Cantidad">
-                            <input type="text" class="ingDatos" name="" id="txtInsumoVal" placeholder="Valor">
+                            <div class="form-title"
+                                style="display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center;">
+
+                                <label for="busqueda" style="font-size: medium;"><strong>Realizar
+                                        consulta</strong></label>
+                                <input type="text" class="ingDatos" name="" id="txtId3" placeholder="Código"
+                                    style="width: 4rem;">
+
+                                <div class="form-btn">
+
+                                    <input id="botonDatos" type="button" style="text-align: center; width: 5rem;"
+                                        name="" value="Buscar" onclick="Buscar3()"
+                                        style="display: flex;margin-left: auto;">
+
+                                    <input id="botonDatos" type="reset"
+                                        style="text-align: center; height: 1.2rem; width: 4rem;margin-top: 4px;"
+                                        value="Limpiar">
+                                </div>
+                            </div>
+
+                            <input type="text" class="ingDatos" name="" id="txtNombre3" placeholder="Nombre">
+                            <input type="text" class="ingDatos" name="" id="txtDescripcion3" placeholder="Descripcion">
+                            <input type="text" class="ingDatos" name="" id="txtCantidad3" placeholder="Cantidad">
+                            <input type="text" class="ingDatos" name="" id="txtValor3" placeholder="Valor">
+
                             <div class="form-btn">
-                                <input id="botonDatos" type="button" name="" value="Agregar" onclick="carga3()"
-                                    style="text-align: center;">
+
+                                <input id="botonDatos" type="button" style="text-align: center;" name=""
+                                    value="Registrar" onclick="Registrar3(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
+                                <input id="botonDatos" type="button" style="text-align: center;" name=""
+                                    value="Modificar" onclick="Modificar3(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
+                                <input id="botonDatos" type="button"
+                                    style="text-align: center;background-color: rgb(139, 34, 34);" name=""
+                                    value="Eliminar" onclick="Eliminar3(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
 
                             </div>
 
                         </form>
-
- -->
-                        <section id="java">
-
-                            <p id="pEst"></p>
-                        </section>
-
-                        <div class="reinicio" style="display: flex; justify-content: end;">
-                            <center>
-                                <input id="botonReinicio" class="delete-button " style="text-align: center; background-color: blue;"
-                                    type="button" name="" value="Actualizar" onclick="document.location.reload();">
-                            </center>
-                        </div>
-
+                    
                 </div>
             </div>
             <section id="tablas">
 
-                <section id="tabla1" style=" height: 20rem; overflow-y: scroll; margin-bottom: 2px;">
+                <section id="tabla1" style=" height: 15rem; overflow-y: scroll;">
                     <table id="tabla1">
                         <div class="form-title">
-                            <h4 style="color: antiquewhite;">Hamburguesas y combos</h4>
+                            <h4 style="color: antiquewhite;">Comestibles</h4>
                         </div>
                         <input type="text" id="busqueda1" placeholder="Buscar">
                         <thead>
@@ -244,7 +172,7 @@
                     </table>
                 </section>
 
-                <section id="tabla2" style=" height: 20rem; overflow-y: scroll; margin-top: 2px;">
+                <section id="tabla1" style=" height: 15rem; overflow-y: scroll;">
                     <table>
                         <div class="form-title">
                             <h4 style="color: antiquewhite;">Bebidas</h4>
@@ -262,9 +190,11 @@
                         <tbody id="tbody2">
 
                         </tbody>
+
                     </table>
                 </section>
-                <section id="tabla1" style=" height: 20rem; overflow-y: scroll; margin-top: 5px;">
+
+                <section id="tabla1" style=" height: 15rem; overflow-y: scroll;">
                     <table>
                         <div class="form-title">
                             <h4 style="color: antiquewhite;">Insumos</h4>
@@ -274,7 +204,7 @@
                             <tr id="lista">
                                 <th>Código</th>
                                 <th>Nombre</th>
-                                <th>Tamaño cm3/gr</th>
+                                <th>Descripcion</th>
                                 <th>Cantidad</th>
                                 <th>Valor</th>
 
@@ -285,7 +215,6 @@
 
                         </tbody>
                     </table>
-
                 </section>
 
             </section>
@@ -294,11 +223,6 @@
     <footer>
         <h5> Sistemas 3 </h5>
     </footer>
-
-
-    <!--  <script src="TP_Sistemas3.js"></script> -->
-
-
 
     <script>
         function salida() {

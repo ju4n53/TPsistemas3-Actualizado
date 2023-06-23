@@ -52,7 +52,7 @@ main {
     background-color: rgb(49, 49, 49);
     color: aliceblue;
     display: flex;
-    padding: 4rem;
+    padding: .4rem;
 
 }
 
@@ -84,7 +84,7 @@ main {
 
 .sidebar li {
     margin: 1rem;
-    padding: 1rem;
+    padding: .50rem;
     text-align: center;
     list-style: none;
 
