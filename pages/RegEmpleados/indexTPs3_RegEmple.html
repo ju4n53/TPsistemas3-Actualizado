@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="./index.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="/js/RegEmpleado.js"></script>
 </head>
 
 <body>
@@ -37,6 +39,7 @@
         <div class="sidebar">
 
             <ul>
+
                 <li>
                     <a href="../Ventas/indexTPs3_ventas.html">Ventas</a>
                 </li>
@@ -46,17 +49,24 @@
                 </li>
                 <hr>
                 <li>
-                    <a href="../RegProducto/indexTPs3_RegProdu.html">
-                        Registro de Productos</a>
+
+                    <a href="/pages/RegProducto/indexTPs3_RegProdu.html">
+                        Registro Comestibles</a>
                 </li>
                 <hr>
                 <li>
-                    <a href="../Stock/indexTPs3_stock.html">
-                        Stock</a>
+                    <a href="/pages/RegProducto/indexTPs3_RegProdu2.html">
+                        Registro Bebidas</a>
                 </li>
                 <hr>
                 <li>
-                    <a href="./indexTPs3_RegEmple.html">
+                    <a href="/pages/RegProducto/indexTPs3_RegProduc3.html">
+                        Registro de Insumos
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="../RegEmpleados/indexTPs3_RegEmple.html">
                         Registro de Empleados
                     </a>
                 </li>
@@ -81,111 +91,120 @@
                 <div class="hero-empl ">
 
                     <form>
-                        <div class="regEmpleado">
+                        <div class="regEmpleado" style=" margin-left: 1%;">
 
-                            <!-- <h3 style="text-align: center; margin-top: 1px;">Nuevo ingreso</h3> -->
-                            <input type="text" id="IdEmpleado" placeholder="ID" disabled>
-                            <!-- <input type="text" id="dni" placeholder="DNI"> -->
                             <input type="text" id="Cuil" placeholder="Cuil">
-                            <input type="text" id="apellid" placeholder="Apellido">
-                            <input type="text" id="nombr" placeholder="Nombre">
-                            <!-- <input type="text" id="Edad" placeholder="Edad"> -->
+                            <input type="text" id="Apellido" placeholder="Apellido">
+                            <input type="text" id="Nombre" placeholder="Nombre">
 
 
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Direccion</label>
-                                <input type="text" id="Calle" placeholder="Calle" style="width: 9rem;">
-                                <input type="text" id="NumCalle" placeholder="N°" style="width: 5rem;">
-                                <input type="text" id="Dpto" placeholder="Dpto" style="width: 5rem;">
+                                <input type="text" id="idCalle" placeholder="Calle" style="width: 9rem;">
+                                <input type="text" id="idNumCalle" placeholder="N°" style="width: 5rem;">
+                                <input type="text" id="idDpto" placeholder="Dpto" style="width: 5rem;">
                                 <input type="text" id="Piso" placeholder="Piso" style="width: 5rem;">
-                                <input type="text" id="Barrio" placeholder="Barrio" style="width: 9rem;">
-                                <input type="text" id="Localidad" placeholder="Localidad" style="width: 9rem;">
-                                <input type="text" id="CodPostal" placeholder="CodPostal" style="width: 9rem;">
+                                <input type="text" id="idBarrio" placeholder="Barrio" style="width: 9rem;">
+                                <input type="text" id="idLocalidad" placeholder="IdLocalidad" style="width: 9rem;">
+
                             </div>
 
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Fecha de Ingreso</label>
-                                <input type="date" id="FechIngre" placeholder="Fecha de Ingreso" style="width: 9rem;">
-                                <!-- ! agregar un input o check que diga si el empleado esta activo o no -->
+                                <input type="text" id="idFechIngre" placeholder="Fecha de Ingreso" style="width: 9rem;">
+
+                            </div>
+
+                            <input type="text" id="IdPuesto" placeholder="IdPuesto" style="width: 9rem;">
+
+
+
+                            <div class="form-btn">
+
+                                <input id="botonDatos" type="button" style="text-align: center;" name=""
+                                    value="Registrar" onclick="Registrar(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
+                                <input id="botonDatos" type="button" style="text-align: center;" name=""
+                                    value="Modificar" onclick="Modificar(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
+                                <input id="botonDatos" type="button"
+                                    style="text-align: center;background-color: rgb(139, 34, 34);" name=""
+                                    value="Eliminar" onclick="Eliminar(), document.location.reload()"
+                                    style="display: flex;margin-left: auto;">
+
                             </div>
 
 
-                            <div class="column"
-                                style="display: grid;grid-template-columns: 1fr 1fr 1fr;flex-direction: column;">
-                                <label style="font-size: .74rem;">N° telefonico</label>
-                                <input type="tel" id="telCaract" placeholder="Caract"
-                                    style="width: 4rem; font-size: .70rem;">
-                                <input type="tel" id="telNum" placeholder="Numero" style="width: 5rem;">
+                            <div class="form-title"
+                                style="display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center;">
+
+                                <label for="busqueda" style="font-size: medium;"><strong>Realizar
+                                        consulta</strong></label>
+                                <input type="text" class="ingDatos" name="" id="txtId" placeholder="Código"
+                                    style="width: 4rem;">
+
+                                <div class="form-btn">
+
+                                    <input id="botonDatos" type="button" style="text-align: center; width: 5rem;"
+                                        name="" value="Buscar" onclick="Buscar()"
+                                        style="display: flex;margin-left: auto;">
+
+                                    <input id="botonDatos" type="button" onclick="reset()"
+                                        style="text-align: center; height: 1.2rem; width: 4rem;margin-top: 4px;"
+                                        value="Limpiar">
+                                </div>
+
                             </div>
 
-                            <input type="mail" id="email" placeholder="Email">
-                            <input type="text" id="PuestLabor" placeholder="Puesto" style="width: 9rem;">
-
-                            <input type="button" value="Registrar" onclick="guardar()">
-
-                            <!-- !reveer una segunda peticion de contraseña para usuario administrativo que ingrese a regEmpl
-                            !    o regProduc -->
-                        </div>
                     </form>
                 </div>
+            </section>
 
-                <div class="hero-empl ">
+            <section>
+            <div class="hero-empl ">
 
-                    <div class="tablaEmplead">
+                <div class="tablaEmplead" style="display: block; margin-left: 1px;">
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <!-- <th>DNI</th> -->
-                                    <th>Cuil</th>
-                                    <th>Apellido</th>
-                                    <th>Nombre</th>
-                                   <!--  <th>Edad</th> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cuil</th>
+                                <th>Apellido</th>
+                                <th>Nombre</th>
 
-                                    <th>Calle</th>
-                                    <th>N°</th>
-                                    <th>Dpto</th>
-                                    <th>Piso</th>
-                                    <th>Barrio</th>
-                                    <th>Localidad</th>
-                                    <th>CP</th>
+                                <th>Calle</th>
+                                <th>N°</th>
+                                <th>Dpto</th>
+                                <th>Piso</th>
+                                <th>Barrio</th>
+                                <th>IdLocalidad</th>
+                                <th>Fecha de Ingreso</th>
+                                <th>IdPuesto</th>
 
-                                    <th>Fecha de Ingreso</th>
-                                    <th>Teléfono</th>
-                                    <th>Email</th>
-                                </tr>
-                            </thead>
+                        </thead>
 
-                            <tbody>
+                        <tbody id="tbody1">
 
-                            </tbody>
+                        </tbody>
 
-                        </table>
+                    </table>
 
-                    </div>
                 </div>
+            </div>
 
             </section>
         </main>
     </div>
     <footer>
-        <h5> Sistemas 3 </h5>
+        <h5> Sistemas 3    Castro-Chiliguay-Clemente-Velez-Videla  31NMS </h5>
     </footer>
 
 
-    <!-- <script>
-        function salida() {
-            window.location.href = "testing_tpS3Validador.html";
-        } -->
-    </script>
-    <script src="../../js/RegProdu.js"></script>
-    <script src="../../js/RegProdu2.js"></script>
-    <script src="../../js/TP_Sistemas3.js"></script>
-
-    <!--  <script src="TP_Sist"></script> -->
 </body>
 
 </html>

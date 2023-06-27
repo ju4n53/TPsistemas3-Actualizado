@@ -20,8 +20,7 @@
 }
 
 .regEmpleado {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
@@ -84,10 +83,12 @@
     padding: 8px;
     text-align: left;
     margin: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #4b4949;
+    background-color: #f2f2f2;
 }
 
 .tablaEmplead th {
     background-color: #f2f2f2;
     font-weight: bold;
+    font-family: 'Roboto';
 }
