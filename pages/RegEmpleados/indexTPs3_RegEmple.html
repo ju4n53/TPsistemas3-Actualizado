@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="./index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
-    <script src="/js/RegEmpleado.js"></script>
-</head>
+    
 
 <body>
     <header>
@@ -68,6 +67,12 @@
                 <li>
                     <a href="../RegEmpleados/indexTPs3_RegEmple.html">
                         Registro de Empleados
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="/pages/acerca de/acerca_de.html">
+                        Acerca de
                     </a>
                 </li>
                 <div class="btn-sidebar">
@@ -201,9 +206,99 @@
         </main>
     </div>
     <footer>
-        <h5> Sistemas 3    Castro-Chiliguay-Clemente-Velez-Videla  31NMS </h5>
+        <h5> Sistemas 3 </h5>
     </footer>
 
+    <script>
+
+        
+
+
+GetAll()
+
+function GetAll() {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "http://localhost:53248/api/Empleados",
+        success: function (data) {
+            //alert(data)
+
+            const tbody1 = document.getElementById("tbody1");
+
+            data.forEach(o => {
+                let _tr = `<tr>
+                <td>${o.IdEmpleado}</td>
+                <td>${o.Cuil}</td>
+				<td>${o.Apellido}</td>
+                <td>${o.Nombre}</td>
+				<td>${o.Calle}</td>
+                <td>${o.Numero}</td>
+                <td>${o.Dpto}</td>
+                <td>${o.Piso}</td>
+                <td>${o.Barrio}</td>
+                <td>${o.IdLocalidad}</td>
+                <td>${o.FechaIngreso}</td>
+                <td>${o.IdPuesto}</td>
+            
+            </tr>`
+
+                tbody1.innerHTML += _tr;
+            });
+        },
+        error: function (error) {
+
+            console.log(error)
+        }
+    })
+
+}
+
+function Buscar() {
+    const id = document.getElementById("txtId")
+
+    get(parseInt(id.value))
+}
+
+function get(id) {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "http://localhost:53248/api/Empleados/" + id,
+        success: function (data) {
+            console.log(data)
+
+            const _Cuil = document.getElementById("Cuil")
+            const _Apellido = document.getElementById("Apellido")
+            const _Nombre = document.getElementById("Nombre")
+            const _Calle = document.getElementById("idCalle")
+            const _NumCalle = document.getElementById("idNumCalle")
+            const _Dpto = document.getElementById("idDpto")
+            const _Piso = document.getElementById("Piso")
+            const _Barrio = document.getElementById("idBarrio")
+            const _IdLocalidad = document.getElementById("idLocalidad")
+            const _FechaIngreso = document.getElementById("idFechIngre")
+            const _IdPuesto = document.getElementById("IdPuesto")
+            
+
+            _Cuil.value = data.Cuil;
+            _Apellido.value = data.Apellido;
+            _Nombre.value = data.Nombre;
+            _Calle.value = data.Calle;
+            _NumCalle.value = data.NumeroCalle;
+            _Dpto.value = data.Dpto;
+            _Piso.value = data.Piso;
+            _Barrio.value = data.Barrrio;
+            _IdLocalidad.value = data.IdLocalidad;
+            _FechaIngreso.value = data.FechaIngreso;
+            _IdPuesto.value = data.IdPuesto;
+        
+        }
+    })
+}
+
+
+    </script>
 
 </body>
 
