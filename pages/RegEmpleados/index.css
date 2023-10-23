@@ -18,6 +18,10 @@
     margin-bottom: 0.1px;
     color: #f2f2f2;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
 
 .regEmpleado {
     display: flex;
@@ -54,6 +58,35 @@
     border: 1px solid #ccc;
 }
 
+.sidebar-empl{
+    color: aliceblue;
+    display: flex;
+    padding: 0.4rem;
+}
+
+.sidebar-empl hr {
+    height: 1px;
+}
+.sidebar-empl li a {
+    color: rgb(206, 149, 26);
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidebar-empl li {
+    margin: 1rem;
+    padding: .50rem;
+    text-align: center;
+    list-style: none;
+
+}
+
+.sidebar-empl hr {
+    background-color: rgb(197, 165, 20);
+
+    border: none;
+}
 
 .regEmpleado input[type="button"] {
     width: 120px;
@@ -78,17 +111,32 @@
     border-collapse: collapse;
 }
 
-.tablaEmplead th,
+/* .tablaEmplead th,
 .tablaEmplead td {
     padding: 8px;
     text-align: left;
     margin: 1rem;
     border-bottom: 1px solid #4b4949;
     background-color: #f2f2f2;
-}
+} */
 
-.tablaEmplead th {
+/* .tablaEmplead th {
     background-color: #f2f2f2;
     font-weight: bold;
     font-family: 'Roboto';
+} */
+label{
+    font-family: 'Roboto';
+    font-size: bold;
+}
+th, td {
+    padding: .9rem;
+    text-align: left;
+    background-color:#fffef6;
+    font-family: 'Roboto';
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color:#ffd904;
 }

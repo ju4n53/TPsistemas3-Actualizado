@@ -1,4 +1,112 @@
-.conteinerMain {
+.ventas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 1rem;
+
+  }
+
+  main{
+    margin-left:2rem ;
+  }
+  .ventas input[type="text"],
+  .ventas select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .ventas label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  /* .form-btn input[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    margin-left: 10px;
+  } */
+
+  .form-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .form-title label {
+    font-size: 16px;
+  }
+
+  .form-title input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .form-title  input[type="button"] {
+    width: 120px;
+    height: 40px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+
+.form-btn .btn-cancel{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: .4rem;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e31c1c;
+}
+.form-btn .btn-register{
+    padding:.3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: .3rem;
+    color: #fff;
+    background-color: #62e31c;
+
+}
+
+  .form-title .form-btn {
+    justify-self: end;
+    margin-top: 0;
+  }
+  label {
+    color: #696969;
+    font-family: 'Roboto';
+    margin-bottom:.3rem;
+    padding: .3rem;
+  }
+#consult{
+    color: #f2f2f2;
+}
+  .conteinerMain {
     margin: .4rem;
     padding: 1rem;
     background-color: #f2f2f2;

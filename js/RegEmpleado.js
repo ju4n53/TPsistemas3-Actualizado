@@ -63,7 +63,7 @@ function get(id) {
             const Piso = document.getElementById("Piso")
             const Barrio = document.getElementById("idBarrio")
             const IdLocalidad = document.getElementById("idLocalidad")
-            const FechaIngreso = document.getElementById("idFechaIngreso")
+            const FechaIngreso = document.getElementById("idFechIngre")
             const IdPuesto = document.getElementById("IdPuesto")
             
 
@@ -71,10 +71,10 @@ function get(id) {
             Apellido.value = data.Apellido;
             Nombre.value = data.Nombre;
             Calle.value = data.Calle;
-            NumCalle.value = data.NumeroCalle;
+            NumCalle.value = data.Numero;
             Dpto.value = data.Dpto;
             Piso.value = data.Piso;
-            Barrio.value = data.Barrrio;
+            Barrio.value = data.Barrio;
             IdLocalidad.value = data.IdLocalidad;
             FechaIngreso.value = data.FechaIngreso;
             IdPuesto.value = data.IdPuesto;

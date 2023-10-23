@@ -8,9 +8,10 @@
     <title>TP Sistemas 3 - Registro de Empleados</title>
     <link rel="shortcut icon" href="https://img.icons8.com/emoji/60/hamburger-emoji.png" type="image/x-icon">
     <link rel="stylesheet" href="../../index.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css">s
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
+    <script src="../../js/RegEmpleado.js"></script>
     
 
 <body>
@@ -35,7 +36,7 @@
     </header>
 
     <div class="container-content">
-        <div class="sidebar">
+        <div class="sidebar-empl">
 
             <ul>
 
@@ -87,11 +88,11 @@
 
 
             <section>
-
+<!-- 
 
                 <div class="hero-title-empl">
                     <h2>Registro de empleados</h2>
-                </div>
+                </div> -->
 
                 <div class="hero-empl ">
 
@@ -106,39 +107,45 @@
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Direccion</label>
-                                <input type="text" id="idCalle" placeholder="Calle" style="width: 9rem;">
-                                <input type="text" id="idNumCalle" placeholder="N°" style="width: 5rem;">
-                                <input type="text" id="idDpto" placeholder="Dpto" style="width: 5rem;">
-                                <input type="text" id="Piso" placeholder="Piso" style="width: 5rem;">
-                                <input type="text" id="idBarrio" placeholder="Barrio" style="width: 9rem;">
-                                <input type="text" id="idLocalidad" placeholder="IdLocalidad" style="width: 9rem;">
+                                <input type="text" id="idCalle"  style="width: 9rem;">
+                                <label style="font-size: .74rem;">N° Calle</label>
+                                <input type="text" id="idNumCalle"  style="width: 5rem;">
+                                <label style="font-size: .74rem;">Dpto</label>
+                                <input type="text" id="idDpto"  style="width: 5rem;">
+                                <label style="font-size: .74rem;">Piso</label>
+                                <input type="text" id="Piso"  style="width: 5rem;">
+                                <label style="font-size: .74rem;">Barrio</label>
+                                <input type="text" id="idBarrio"  style="width: 9rem;">
+                                <label style="font-size: .74rem;">Localidad</label>
+                                <input type="text" id="idLocalidad"  style="width: 9rem;">
 
                             </div>
 
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Fecha de Ingreso</label>
-                                <input type="text" id="idFechIngre" placeholder="Fecha de Ingreso" style="width: 9rem;">
+                                <input type="text" id="idFechIngre"  style="width: 9rem;">
 
                             </div>
 
-                            <input type="text" id="IdPuesto" placeholder="IdPuesto" style="width: 9rem;">
+                            <label style="font-size: .74rem;">Id del puesto</label>
+                            <input type="text" id="IdPuesto"  style="width: 9rem;">
 
 
 
                             <div class="form-btn">
 
                                 <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Registrar" onclick="Registrar(), document.location.reload()"
+                                    value="Registrar" onclick="Registrar()"
                                     style="display: flex;margin-left: auto;">
 
                                 <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Modificar" onclick="Modificar(), document.location.reload()"
+                                    value="Modificar" onclick="Modificar()"
                                     style="display: flex;margin-left: auto;">
 
                                 <input id="botonDatos" type="button"
                                     style="text-align: center;background-color: rgb(139, 34, 34);" name=""
-                                    value="Eliminar" onclick="Eliminar(), document.location.reload()"
+                                    value="Eliminar" onclick="Eliminar()"
                                     style="display: flex;margin-left: auto;">
 
                             </div>
@@ -209,7 +216,7 @@
         <h5> Sistemas 3 </h5>
     </footer>
 
-    <script>
+    <!-- <script>
 
         
 
@@ -285,10 +292,10 @@ function get(id) {
             _Apellido.value = data.Apellido;
             _Nombre.value = data.Nombre;
             _Calle.value = data.Calle;
-            _NumCalle.value = data.NumeroCalle;
+            _NumCalle.value = data.Numero;
             _Dpto.value = data.Dpto;
             _Piso.value = data.Piso;
-            _Barrio.value = data.Barrrio;
+            _Barrio.value = data.Barrio;
             _IdLocalidad.value = data.IdLocalidad;
             _FechaIngreso.value = data.FechaIngreso;
             _IdPuesto.value = data.IdPuesto;
@@ -298,7 +305,7 @@ function get(id) {
 }
 
 
-    </script>
+    </script> -->
 
 </body>
 

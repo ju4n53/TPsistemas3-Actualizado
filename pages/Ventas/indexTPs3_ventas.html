@@ -86,19 +86,65 @@
         <main>
 
 
+           
             <form>
-                <div class="conteinerVentas"
-                    style="display: flex; position: relative; height: 15rem; width: 50rem; background-color: antiquewhite; border-radius: 7px 7px 7px 7px;
-                    top: 1px; left: 10px;">
+                <div class="conteinerVentas">
 
-                        <div class="form-title" style="text-align: center;" >
-                            <h4>ventas</h4>
-                        </div>
+                    <div class="hero-empl ">
+
+                        <form>
+                            <div class="ventas">
+                                <input type="text" id="producto" placeholder="Producto">
+                                <input type="text" id="cantidad" placeholder="Cantidad">
+                                <input type="text" id="precio" placeholder="Precio">
+
+                                <div>
+                                    <label for="medioPago">Medio de Pago:</label>
+                                    <select id="medioPago">
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="tarjeta">Tarjeta</option>
+                                    </select>
+                                </div>
+
+                                <input type="text" id="montoFinal" placeholder="Monto Final">
+
+                                <div>
+                                    <label for="estado">Estado:</label>
+                                    <select id="estado">
+                                        <option value="porTerminar">Por Terminar</option>
+                                        <option value="terminado">Terminado</option>
+                                    </select>
+                                </div>
+
+                                <input type="text" id="cliente" placeholder="Cliente">
+
+                                <div class="form-btn">
+                                    <input id="registrarVenta" type="button" name="" class="btn-register"
+                                        value="Registrar Venta" onclick="registrarVenta()">
+                                    <input id="cancelarVenta" type="button" class="btn-cancel" name=""
+                                        value="Cancelar Venta" onclick="cancelarVenta()">
+                                </div>
+                            </div>
+
+                            <div class="form-title">
+                                <label id="consult" for="consulta"><strong>Realizar consulta</strong></label>
+                                <input type="text" id="ventaId" placeholder="ID de Venta">
+
+                                <div class="form-btn">
+                                    <input id="buscarVenta" type="button" name="" value="Buscar Venta"
+                                        onclick="buscarVenta()">
+                                    <input id="limpiarConsulta" type="button" name="" value="Limpiar"
+                                        onclick="limpiarConsulta()">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
 
 
                 </div>
             </form>
+
 
 
         </main>
