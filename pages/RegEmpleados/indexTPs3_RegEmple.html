@@ -12,7 +12,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
     <script src="../../js/RegEmpleado.js"></script>
-    
+
+    <style>
+        .disabled {
+            color: rgb(119, 136, 153);
+        }
+    </style>
+
+</head>
 
 <body>
     <header>
@@ -88,7 +95,7 @@
 
 
             <section>
-<!-- 
+                <!-- 
 
                 <div class="hero-title-empl">
                     <h2>Registro de empleados</h2>
@@ -107,46 +114,47 @@
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Direccion</label>
-                                <input type="text" id="idCalle"  style="width: 9rem;">
+                                <input type="text" id="idCalle" style="width: 9rem;">
                                 <label style="font-size: .74rem;">N° Calle</label>
-                                <input type="text" id="idNumCalle"  style="width: 5rem;">
+                                <input type="text" id="idNumCalle" style="width: 5rem;">
                                 <label style="font-size: .74rem;">Dpto</label>
-                                <input type="text" id="idDpto"  style="width: 5rem;">
+                                <input type="text" id="idDpto" style="width: 5rem;">
                                 <label style="font-size: .74rem;">Piso</label>
-                                <input type="text" id="Piso"  style="width: 5rem;">
+                                <input type="text" id="Piso" style="width: 5rem;">
                                 <label style="font-size: .74rem;">Barrio</label>
-                                <input type="text" id="idBarrio"  style="width: 9rem;">
+                                <input type="text" id="idBarrio" style="width: 9rem;">
                                 <label style="font-size: .74rem;">Localidad</label>
-                                <input type="text" id="idLocalidad"  style="width: 9rem;">
+                                <input type="text" id="idLocalidad" style="width: 9rem;">
 
                             </div>
 
                             <div class="column"
                                 style="display: grid;grid-template-columns: 1fr 1fr;flex-direction: column;">
                                 <label style="font-size: .74rem;">Fecha de Ingreso</label>
-                                <input type="text" id="idFechIngre"  style="width: 9rem;">
+                                <input type="text" id="idFechIngre" style="width: 9rem;">
 
                             </div>
 
                             <label style="font-size: .74rem;">Id del puesto</label>
-                            <input type="text" id="IdPuesto"  style="width: 9rem;">
+                            <input type="text" id="IdPuesto" style="width: 9rem;">
 
 
 
                             <div class="form-btn">
 
                                 <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Registrar" onclick="Registrar()"
-                                    style="display: flex;margin-left: auto;">
+                                    value="Registrar" onclick="Registrar()" style="display: flex;margin-left: auto;">
 
                                 <input id="botonDatos" type="button" style="text-align: center;" name=""
-                                    value="Modificar" onclick="Modificar()"
-                                    style="display: flex;margin-left: auto;">
+                                    value="Modificar" onclick="Modificar()" style="display: flex;margin-left: auto;">
 
                                 <input id="botonDatos" type="button"
                                     style="text-align: center;background-color: rgb(139, 34, 34);" name=""
-                                    value="Eliminar" onclick="Eliminar()"
-                                    style="display: flex;margin-left: auto;">
+                                    value="Eliminar" onclick="Eliminar()" style="display: flex;margin-left: auto;">
+
+                                    <form onsubmit="return false">
+                                        <input type="button" value="Deshabilitar/Habilitar" onclick="Deshabilitar()">
+                                    </form>
 
                             </div>
 
@@ -177,37 +185,37 @@
             </section>
 
             <section>
-            <div class="hero-empl ">
+                <div class="hero-empl ">
 
-                <div class="tablaEmplead" style="display: block; margin-left: 1px;">
+                    <div class="tablaEmplead" style="display: block; margin-left: 1px;">
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Cuil</th>
-                                <th>Apellido</th>
-                                <th>Nombre</th>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cuil</th>
+                                    <th>Apellido</th>
+                                    <th>Nombre</th>
 
-                                <th>Calle</th>
-                                <th>N°</th>
-                                <th>Dpto</th>
-                                <th>Piso</th>
-                                <th>Barrio</th>
-                                <th>IdLocalidad</th>
-                                <th>Fecha de Ingreso</th>
-                                <th>IdPuesto</th>
+                                    <th>Calle</th>
+                                    <th>N°</th>
+                                    <th>Dpto</th>
+                                    <th>Piso</th>
+                                    <th>Barrio</th>
+                                    <th>IdLocalidades</th>
+                                    <th>Fecha de Ingresos</th>
+                                    <th>IdPuestos</th>
 
-                        </thead>
+                            </thead>
 
-                        <tbody id="tbody1">
+                            <tbody id="tbody1">
 
-                        </tbody>
+                            </tbody>
 
-                    </table>
+                        </table>
 
+                    </div>
                 </div>
-            </div>
 
             </section>
         </main>

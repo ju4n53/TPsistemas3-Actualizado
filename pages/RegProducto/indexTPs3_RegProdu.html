@@ -239,7 +239,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:53248/api/Insumos",
+                url: "http://localhost:60032/api/Insumos",
                 success: function (data) {
                     //alert(data)
 
@@ -272,7 +272,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:53248/api/Bebida",
+                url: "http://localhost:60032/api/Bebida",
                 success: function (data) {
                     //alert(data)
 
@@ -305,7 +305,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:53248/api/Comestibles",
+                url: "http://localhost:60032/api/Comestibles",
                 success: function (data) {
                     //alert(data)
 
@@ -340,7 +340,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:53248/api/Comestibles/" + id,
+                url: "http://localhost:60032/api/Comestibles/" + id,
                 success: function (data) {
                     console.log(data)
 
@@ -378,7 +378,7 @@
                 type: "POST",
                 dataType: "json",
                 data: obj,
-                url: "http://localhost:53248/api/Comestibles",
+                url: "http://localhost:60032/api/Comestibles",
                 success: function (data) {
                     alert("Carga exitosa!!")
                 },
@@ -411,7 +411,7 @@
                 type: "PUT",
                 dataType: "json",
                 data: obj,
-                url: "http://localhost:53248/api/Comestibles/" + id,
+                url: "http://localhost:60032/api/Comestibles/" + id,
                 success: function (data) {
                     alert("Cambio Exitoso!!!");
                 },
@@ -438,7 +438,7 @@
             $.ajax({
                 type: "Delete",
                 dataType: "json",
-                url: "http://localhost:53248/api/Comestibles/" + id,
+                url: "http://localhost:60032/api/Comestibles/" + id,
                 success: function (data) {
                     alert("Proceso Exitos...!!!")
 

@@ -7,7 +7,7 @@ function GetAll() {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://localhost:53248/api/Empleados",
+        url: "http://localhost:60032/api/Empleados",
         success: function (data) {
             //alert(data)
 
@@ -50,7 +50,7 @@ function get(id) {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://localhost:53248/api/Empleados/" + id,
+        url: "http://localhost:60032/api/Empleados/" + id,
         success: function (data) {
             console.log(data)
 
@@ -81,4 +81,34 @@ function get(id) {
         
         }
     })
+}
+
+
+function Deshabilitar() {
+    var BuscarId = document.getElementById("txtId").value;
+    var table = document.getElementById("tbody1");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 0; i < rows.length; i++) {
+        var nombre = rows[i].getElementsByTagName("td")[0].textContent;
+        if (nombre.toLowerCase() === BuscarId.toLowerCase()) {
+            var cells = rows[i].getElementsByTagName("td");
+            var button = rows[i].querySelector("input[type=button]");
+            for (var j = 0; j < cells.length - 1; j++) {
+                if (cells[j].hasAttribute("disabled")) {
+                    cells[j].removeAttribute("disabled");
+                    cells[j].classList.remove("disabled");
+                } else {
+                    cells[j].setAttribute("disabled", true);
+                    cells[j].classList.add("disabled");
+                }
+            }
+            if (button.value === "Deshabilitar") {
+                button.value = "Habilitar";
+            } else {
+                button.value = "Deshabilitar";
+            }
+            break; // Detenemos la búsqueda después de encontrar el primer empleado con ese nombre
+        }
+    }
 }

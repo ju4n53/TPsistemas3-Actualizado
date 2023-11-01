@@ -71,7 +71,7 @@ function GetAll3() {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://localhost:53248/api/Insumos",
+        url: "http://localhost:60032/api/Insumos",
         success: function (data) {
             //alert(data)
 
