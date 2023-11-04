@@ -94,8 +94,32 @@
 
                         <form>
                             <div class="ventas">
-                                <input type="text" id="producto" placeholder="Producto">
-                                <input type="text" id="cantidad" placeholder="Cantidad">
+                                <!-- <input type="text" id="producto" placeholder=""> -->
+                                <div>
+                                    <label for="selectBebida">elegí bebida:</label>
+                                    <select id="medioPago">
+                                        <option value="efectivo">Coca-cola Cero 500ml </option>
+                                        <option value="tarjeta">Coca-cola Light 500ml</option>
+                                        <option value="tarjeta">Coca-cola regular 500ml</option>
+                                        <option value="tarjeta">Fanta cero 500ml </option>
+                                        <input type="text" id="cantidad" placeholder="Cantidad">
+                                    </select>
+                                </div>
+
+                                <!-- <input type="text" id="producto" placeholder="Producto"> -->
+                                <div>
+                                    <label for="selectCombo">elegí combo:</label>
+                                    <select id="medioPago">
+                                        <option value="efectivo">Papas doble </option>
+                                        <option value="tarjeta">Papas doble x3</option>
+                                        <option value="tarjeta">Papas con cheddar </option>
+                                        <option value="tarjeta">Burguer doble queso </option>
+                                        <option value="tarjeta">Burguer doble queso x2</option>
+                                        <option value="tarjeta">Bondiolita con rucula</option>
+                                        <input type="text" id="cantidad" placeholder="Cantidad">
+                                    </select>
+                                </div>
+                                <!-- <input type="text" id="cantidad" placeholder="Cantidad"> -->
                                 <input type="text" id="precio" placeholder="Precio">
 
                                 <div>
@@ -108,21 +132,21 @@
 
                                 <input type="text" id="montoFinal" placeholder="Monto Final">
 
-                                <div>
+                                <!-- <div>
                                     <label for="estado">Estado:</label>
                                     <select id="estado">
                                         <option value="porTerminar">Por Terminar</option>
                                         <option value="terminado">Terminado</option>
                                     </select>
-                                </div>
+                                </div> -->
 
                                 <input type="text" id="cliente" placeholder="Cliente">
 
                                 <div class="form-btn">
                                     <input id="registrarVenta" type="button" name="" class="btn-register"
                                         value="Registrar Venta" onclick="registrarVenta()">
-                                    <input id="cancelarVenta" type="button" class="btn-cancel" name=""
-                                        value="Cancelar Venta" onclick="cancelarVenta()">
+                                    <!-- <input id="cancelarVenta" type="button" class="btn-cancel" name=""
+                                        value="Cancelar Venta" onclick="cancelarVenta()"> -->
                                 </div>
                             </div>
 

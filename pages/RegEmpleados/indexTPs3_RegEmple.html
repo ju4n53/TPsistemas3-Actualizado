@@ -148,13 +148,15 @@
                                 <input id="botonDatos" type="button" style="text-align: center;" name=""
                                     value="Modificar" onclick="Modificar()" style="display: flex;margin-left: auto;">
 
+                                    <form onsubmit="return false">
                                 <input id="botonDatos" type="button"
                                     style="text-align: center;background-color: rgb(139, 34, 34);" name=""
-                                    value="Eliminar" onclick="Eliminar()" style="display: flex;margin-left: auto;">
+                                    value="Deshabilitar" onclick="Deshabilitar()" style="display: flex;margin-left: auto;">
 
-                                    <form onsubmit="return false">
+                                </form>
+                                    <!-- <form onsubmit="return false">
                                         <input type="button" value="Deshabilitar/Habilitar" onclick="Deshabilitar()">
-                                    </form>
+                                    </form> -->
 
                             </div>
 
@@ -184,12 +186,15 @@
                 </div>
             </section>
 
-            <section>
+<section id="tablas">
+            <section id="tabla4">
                 <div class="hero-empl ">
 
                     <div class="tablaEmplead" style="display: block; margin-left: 1px;">
 
-                        <table>
+                        <table id="tabla4>
+                            
+                            <input type="text" id="busqueda4" placeholder="Buscar">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -218,6 +223,8 @@
                 </div>
 
             </section>
+        </section>
+
         </main>
     </div>
     <footer>

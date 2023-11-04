@@ -112,3 +112,30 @@ function Deshabilitar() {
         }
     }
 }
+
+
+document.getElementById("busqueda4").addEventListener("input", function () {
+    var input = this.value.toLowerCase();
+    var tabla = document.getElementById("tabla4");
+    var filas = tabla.getElementsByTagName("tr");
+
+    for (var i = 1; i < filas.length; i++) {
+        var fila = filas[i];
+        var celdas = fila.getElementsByTagName("td");
+        var encontrado = false;
+
+        for (var j = 0; j < celdas.length; j++) {
+            var celda = celdas[j];
+            if (celda.innerHTML.toLowerCase().indexOf(input) > -1) {
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (encontrado) {
+            fila.style.display = "";
+        } else {
+            fila.style.display = "none";
+        }
+    }
+});
